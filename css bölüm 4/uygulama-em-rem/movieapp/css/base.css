@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+/* Not: Yukarıda fontsize: 62.5% derken tarayıcıda 10px'e karşılık geldiği için yazdık. Ayrıca tarayıcının varsayılan
+font ayarlarının da otomatik bir şekilde orantısal olarak ayarlanması için böyle yüzdelik bir değer verildi. */
+   body{
+       font-size: 1.4rem;
+       /* font değeri 10px*1.4rem=14px ediyor. Tabi bunu yaptığımızda body içinde font değeri verilmişse onları ezer.
+       Daha önce verilen font değerlerini iptal edelim. */
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+}
+
+.row {
+    margin-top: 4rem;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col-2{
+    float: left;
+    width: 50%;                       
+}
+
+.col-3 {
+   float: left;
+    width: 33.3%;
+    padding: 1.6rem;          
+}
+
+.col-4 {
+    float: left;
+    width: 25%;
+}
+
+@media (max-width:768px){
+/* .col-2, .col-3, .col-4 {
+    width: 100%;
+} */
+[class*="col-"]{
+    width: 100%;
+}
+}
+/* Not: Yukarda yapılan 2 işlem de aynı görevi görür. Alttaki blok ile başlangıcı 
+"col-" ile başlayan sınıfların width:100% diyoruz. */
+.container {    
+     width: 100%;
+     padding: 0px 10px; 
+}
+
+.img-fluid{
+    width: 100%;
+}
+
+@media (min-width:576px) {
+    html{
+        font-size: 65%;
+    }
+    .container {
+        margin: 0 auto;
+        width: 540px;
+    }
+}
+@media (min-width:768px) {
+    html{
+        font-size: 68%;
+    }
+    .container {
+        margin: 0 auto;
+        width: 720px;
+    }
+}
+@media (min-width:992px) {
+    html{
+        font-size: 72%;
+    }
+    .container {
+        margin: 0 auto;
+        width: 960px;
+    }
+}
+@media (min-width:1200px) {
+    html{
+        font-size: 75%;
+    }
+    .container {
+        margin: 0 auto;
+        width: 1140px;
+    }
+}
+@media (min-width:1400px) {
+    html{
+        font-size: 80%;
+    }
+    .container {
+        margin: 0 auto;
+        width: 1320px;
+    }
+}

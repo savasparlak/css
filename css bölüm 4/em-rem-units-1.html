@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        html{
+            font-size: 10px;
+        }
+        /* Not: Root olan html etiketine ne değer verilirse rem ölçü birimini kullanan tüm etiketlerin boyutları da orantısal olarak
+        o şekilde hesaplanır.  */
+      
+        #kutu-1{
+            font-size: 20px;
+        }
+       
+        #kutu-1 p{
+            font-size: 1.5em;
+            padding: 1em;            
+        }
+            /* Not: Padding değeri kapsayıcı bir üst eleman olan kutu-1 deki font-size büyüklüğüne bakmaz da o an hangi kapsayıcı 
+            elemanın içinde yer alıyorsa ondaki font-size'a atanan değere bakar; yani yeni fontsize 20*1.5em=30px olduğu için 
+            30px*1=30px değeri padding değeri olarak hesaplar. Ancak bu istenilen bir orantısal bir hesaplama değildir. 
+            Bunun tek referans kapsayıcı elemana bakarak hesaplamalar yapmak daha mantıklı olandır. html kapsayıcı eleman mesela.*/
+        
+            #kutu-3 {
+            font-size: 15px;
+        }
+       
+        #kutu-3 p{
+            font-size: 2rem;            
+        }
+        /* Not: Mesela yukarıda yapılan işlemde p etiketinin font büyüklüğü bir üst kapsayıcı eleman olan kutu-3'ün font büyüklüğü 
+            referans alınarak hesaplama yapılmıyor. Yani 10*2=20px yapılmıyor. En üst root elemanı olan html etiketinin tarayıcı
+            varsayılanı olan 16px*2=32px olarak hesaplanıyor. "rem" (root em demek) aslında. */
+        
+            #kutu-3 h2{
+            font-size: 3rem;            
+        }
+        /* Not: Herhangi bir html fontsize değeri belirtilmediği sürece varsayılan fontsize olan 16px değeri referans alınarak
+            16px*3=48px olarak hesaplanır. */
+      
+    </style>
+</head>
+<body>
+
+    <div id="kutu-1">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, neque sed libero sint illum cumque eveniet, 
+            accusantium delectus, doloremque architecto quae commodi? Recusandae esse velit quae rem aliquam qui accusantium!</p>
+    </div>
+    
+    <div id="kutu-2">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, neque sed libero sint illum cumque eveniet, 
+            accusantium delectus, doloremque architecto quae commodi? Recusandae esse velit quae rem aliquam qui accusantium!</p>
+    </div>
+    <!-- Not: Tarayıcı h2 ve p etiketlerinin font büyüklüğünü içinde bulunduğu bir üst etiketin font büyüklüğünü referans alarak orantısal
+olarak h2 etiketi için 1,5em ile çarparak, p etiketi için ise 1 em ile çarparak ayarlar. Eğer  bir üst etikette bulamazsa body etiketinde, 
+onda da bulamazsa html etiketine bakar, eğer onda da bulamazsa tarayıcının varsayılan 16pxlik font büyüklüğünü referans 
+alarak h2 etiketi için mesela 16*1,5em= 24px olarak hesaplar. Tabi orantısal olarak hesaplama işlemi sadece h ve p etiketleri için değil
+piksel olarak atanan tüm etiketlerin boyutları için geçerlidir. -->
+
+    <div id="kutu-3">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, neque sed libero sint illum cumque eveniet, 
+            accusantium delectus, doloremque architecto quae commodi? Recusandae esse velit quae rem aliquam qui accusantium!</p>
+    </div>
+
+</body>
+</html>

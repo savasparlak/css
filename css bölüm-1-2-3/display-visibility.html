@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- NOT: 
+    1-İkinci kutunun id'sine display:none dediğimizde kutu tarayıcıdan tamamen çıkar
+    ve third box, second box'ın yerine geçer.
+    Ancak visibility:hidden dediğimizde  ise second box yerini korur, yerini işgal
+    eder ama gizlenmiş olur sadece.
+-->
+
+<style>
+.box{width: 60px;height: 60px;margin-bottom: 5px; display: inline-block;}
+#first{background-color: red;}
+#second{background-color: green; visibility: hidden;}
+#third{background-color: blue;}
+
+a{
+    width: 100px;
+    height: 100px; 
+    background-color: darkgray;
+    display: block;
+    margin-bottom: 5px;
+}
+</style>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="box" id="first">first</div>
+        <div class="box" id="second">second</div>
+        <div class="box" id="third">third</div>
+    </div>
+    
+         
+
+</body>
+</html>

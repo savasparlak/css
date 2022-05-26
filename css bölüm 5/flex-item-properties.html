@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+           /* align-items: flex-end; */
+            height: 600px;
+            background-color:#034f84;
+         
+        }
+    
+        .item{
+            background-color: #f7786b;
+            padding: 30px;
+            margin: 20px;
+            color: #fff;
+            font-size: 25px;
+
+            /* flex: 0 0 200px; */
+            /* Not: Yukarda  flex: 0 0 200px; satırında ilk "0" grow özelliği, ikinci "0" shrink özelliği, 200px ise basis özelliğini gösterir.
+            Ve bu şekilde yazdığımızda nesnelerin başlangıç genişliği 200px olarak belirlenir, tarayıcı daralttığımızda ise nesnelerin genişliğinde
+            herhangi bir daralma olmadan sabit kalır. Basis özelliği ile 200px olarak belirtilen genişlik, shrink "0" yazdığımızda nesnelerin daraltmanın
+            önüne geçiyoruz.  */
+
+            /* flex-grow: 1; */
+            /* Not: Tüm elemanları genişlik olarak eşitler ve containerın genişliği
+            kadar elemanları dağıtır ve tüm elemanların genişliğini aynı yapar.
+            Varsayılan özelliği ise flex-grow:0 dır. Elemanlar uzunluk olarak 
+            stretch yapılarak sayfanın sonuna varsayılan olarak uzatılır ama genişlik
+            flex-grow:1 ve üzeri herhangi bir tamsayı yaptığımızda tüm elemanların 
+            genişliğini aynı yapar ve satıra yayar. */
+        }
+
+        /* Not: Aşağıda herhangi bir item classına flex-grow:1 dediğimizde satırın boş kısımlarının 
+        genişliği bu elemanın genişliğine katılır ve diğer elemanlar içerik kadar yer kaplayarak
+        orantısal olarak sayfaya dağılırlar. Eğer .item-1 sınıfına flex-grow:2, .item-3 sınıfına
+        flex-grow:1 dediğimizde elemanları genişlik olarak 2 ye 1 oranında genişleterek ve diğer 
+        elemanları da içeriği kadar genişleterek sayfada dağıtılır.  */
+
+        /* .item-1 {
+            flex-grow: 3;
+        }
+
+        .item-2 {
+           flex-grow: 1;
+        }  
+
+        .item-3 {
+           flex-basis: 200px;
+           flex-shrink: 0;
+        }     */
+
+        /* Not: item-3 elemanına başlangıç genişliği vermek için flex-basis:200px değerini verdik. Tarayıcı genişliğini
+        daralttığımızda nesneler içerik genişliği ulaşana kadar daralır. Eğer flex-basis ile başlangıç değeri verdiğimiz
+        nesnelerin tarayıcı daralttığımızda daralmasını istemiyorsak flex-shrink: 0; değeri vermemiz gerekiyor.*/
+
+        .item-1 { 
+            order:3;
+            flex: 15%;
+        }
+
+        .item-2 {
+            order:1;
+            flex: 25%;
+        }
+
+        .item-3 {
+            order:4;
+            flex: 30%;
+        }
+
+        .item-4 {
+            order:-1;
+            flex: 30%;
+        }
+        /* Not: Yukarda nesnelere yüzdesel olarak belirtilen flex genişlikleri ise orantısal olarak containerın genişliğinden
+        dağıtılır. order özelliği sayesinde de nesneleri order'a verilen sayının büyüklüğü kadar azdan çoğa sıralanmasını sağlar. */
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="item item-1">item 1</div>
+    <div class="item item-2">item 2</div>
+    <div class="item item-3">item 3</div>
+    <div class="item item-4">item 4</div>
+    
+
+    </div>
+</body>
+</html>

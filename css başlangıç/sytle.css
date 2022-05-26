@@ -1,0 +1,22 @@
+section{
+    background-color:#CCD1E4; 
+    text-align: center;
+}
+h1{
+    color:red;
+  }
+
+  h2
+  {
+    color:#11468F ;  
+
+  }
+  ul{
+    list-style-type: none;
+}
+
+a{   margin-left: 25px;
+    text-decoration: none;
+    color: #041562;
+    font-size: large;
+}

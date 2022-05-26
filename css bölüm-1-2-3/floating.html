@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+#container{
+   float: right;
+}
+
+.box{
+    width:150px;
+    height: 150px;
+    background-color: brown;
+    display: inline;
+}
+
+#box2{
+    float: right;
+}
+
+#float_yapma{
+    margin: 2px;
+    float: left; 
+}
+
+#float_yapma1{
+    margin: 2px;
+    float: right; 
+    width:150px;
+    height: 150px;
+    background-color: brown;
+    display: inline;
+    text-align:center;
+}
+
+</style>
+
+</head>
+<body>
+    <!-- Not: Block olan etiketlere text-align özelliği uygulanamaz. Ancak inline veya inline-block olarak tanımlanan etiketlere uygulanabilir.
+Block elemanlarını float özelliği sayesinde ancak sağa ya da sola hizlandırabiliriz. 
+Önemli bir detay verelim : Block elemanlarına float:right dediğimizde blok elemanının satırı kaplama özelliği kaybolur ve tanımlandığı
+satırda genişlik ve yüksekliği kadar yer işgal eder. -->
+<div id="container">
+    <div class="box">KUTU 1</div>
+    <div class="box" id="box2" >KUTU 2</div>
+    <div class="box">KUTU 3</div>
+
+</div>
+
+<div id="float_yapma" class="box">
+Bu blok, Genişlik ve Yükseklik kadar yer kaplar. Yani sağa float edildiğinde satırı bloke etme özelliği kaybolur.
+</div>
+
+<div id="float_yapma1">float_yapma1</div>
+</body>
+</html>

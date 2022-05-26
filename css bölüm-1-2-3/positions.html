@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+
+    #container1{
+        margin-top: 100px;
+        position: relative;
+    }
+
+    body{
+        margin: 0px;
+    }
+    /* NOT: Body etiketinin position özelliği varsayılan olarak relative'dir. 
+    Body etiketi içinde yer alan nesnelere position:absolute verildiğinde bu nesneler
+    kendilerini Body etiketine göre konumlandırır. Ancak aşağıdaki container1 gibi 
+    kapsayıcı etikete position:relative verildiğinde bu sefer de nesneler bir üst
+    kapsayıcı etiketin position özelliğine bakarak hareket edeceği için kendilerini
+    bu container1 olarak tanımlanan kapsayıcı etikete göre konumlandıracaklardır.  
+    
+    Bir de bu absolute olarak tanımlanan nesneler normal nesne akışından çıkarak
+    display:inline-block haline dönüşerek, tarayıcıda içeriği kadar yer kaplarlar. 
+    
+    */
+    .box{
+        border: 5px solid #6d5b95;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+    .navbar{
+        background: #feb236;
+        }
+    .content{
+        background: #d64161;
+    }
+    .footer{
+        background: #ff7b25;
+        position: absolute;
+        top: 0px;
+    }
+</style>
+
+</head>
+<body>
+
+    <div id="container1">
+    <div class="box navbar">Navbar</div>
+    <div class="box content">Content</div>
+    <div class="box footer">Footer</div>
+    </div>
+
+</body>
+</html>

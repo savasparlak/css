@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+            /* flex-direction: row; */
+            /* Not: Eğer display:flex; diyorsak flex-direction: row; yazsak da yazmasak da aynı sonucu görürüz. Nesneler inline-block elemanı 
+            gibi davranırlar */
+            /* flex-direction: column; */
+            /* Not: Elemanlar block eleman gibi davranıyorlar. */
+            /* flex-direction: row-reverse; */
+            /* Not: Elemanlar inline-block gibi davranır, son elemandan ilk elemana doğru sıralanır ancak sağ tarafa yaslanarak gözükürler. */
+            /* flex-direction: column-reverse;    */
+            /* Not:  flex-direction: column-reverse; satırı ile ilk elemandan son elemana aşağıya doğru sıralama yapılır ve nesneler containerın
+            alt kısmından yukardı doğru sıralanarak gözükürler.*/
+
+            /* flex-wrap: nowrap;  */
+            /* Not: Nesneleri tek satırda tutar ve tarayıcı daralsa da nesneler aşağıya kaymaz. Varsayılan özellik budur. */
+            /* flex-wrap: wrap; */
+            /* Not: Tarayıcı daralttığımızda nesneler aşağıya doğru sıralanır. */
+            /* flex-wrap: wrap-reverse; */
+            /* Not: flex-wrap: wrap-reverse; satırı ise tarayıcı daralttığımız anda nesneler tersten ve yukarıdan aşağıya doğru sıralanır.*/
+
+            /* flex-flow: row wrap; */
+            /* Not: flex-wrap: wrap; komutunun yaptığı iş ile aynı işi yapar. Tarayıcı daralttığımızda nesneler aşağıya doğru sıralanır. */
+            height: 600px;
+            background-color:#034f84;
+            padding: 15px;
+        }
+    
+        .item{
+            background-color: #f7786b;
+            padding: 30px;
+            margin: 20px;
+            color: #fff;
+            font-size: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="item">item 1</div>
+    <div class="item">item 2</div>
+    <div class="item">item 3</div>
+    <div class="item">item 4</div>
+    <div class="item">item 5</div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- NOT: 
+    1- Div etiketleri varsayılan olarak tarayıcıda block olarak çalışan etiketlerdir. Yani tanımlandığı satırı olduğu gibi kaplarlar.
+    Block olarak çalışan bu etiketlere biz width ve height özelliği verebiliriz. Alt alta block şeklinde çalışan bu etiketleri eğer
+    yan yana (inline) şeklinde yazmak istersek display özelliğini inline olarak çevirmemiz gerekir. Eğer block şeklinde çalışan bir etiketi
+    display:inline şeklinde yazarsak artık genişlik ve yükseklik özelliğini veremeyiz. Genişlik ve yüksekliği artık içindeki metininin 
+    genişliği ve yüksekliği kadar ayarlanır. Tabi biz hem inline hem block şeklinde çalışmasını istersek div etiketinin display özelliğini
+    display:inline-block şeklinde yazmamız gerekir. O zaman div etiketi hem inline olmuş olur, hem de yükseklik ve genişlik özelliğini de
+    kullanabilir hale getirmiş oluruz.
+
+    2- a etiketleri varsayılan olarak tarayıcıda inline olarak çalışan etiketlerdir. Yani tanımladığı satırda yan yana gelirler. 
+    Genişlik ve yükseklikleri içinde yer alan metin kadar ayarlanır. Eğer birden fazla a etiketi yazarsak bu etiketler yan yana 
+    dizilirler tarayıcıda. Varsayılan olarak inline olan etiketlere direk genişlik ve yükseklik özellikleri veremeyiz. 
+    Sadece sağdan ve soldan padding değer verebiliriz. Eğer genişlik ve yükseklik vermek istersek bu etiketlerin 
+    display özelliğini block yapmamız gerekir. (Örnek: display:block)  
+
+-->
+
+<style>
+.box{width: 60px;height: 60px;margin-bottom: 5px; display: inline-block;}
+#first{background-color: red;}
+#second{background-color: green;}
+#third{background-color: blue;}
+
+a{
+    width: 100px;
+    height: 100px; 
+    background-color: darkgray;
+    display: block;
+    margin-bottom: 5px;
+}
+</style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="box" id="first">first</div>
+        <div class="box" id="second">second</div>
+        <div class="box" id="third">third</div>
+    </div>
+    
+    <div>
+        <a href="">Home</a>
+        <a href="">Movies</a>
+        <a href="">Contact</a>
+    </div>    
+
+</body>
+</html>

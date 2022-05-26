@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+           flex-wrap: wrap;
+           /* align-items: center; */
+           align-content: center;
+           /* align-content: flex-start; */
+           /* align-content: flex-end; */
+           /* align-content: space-around; */
+           /* align-content: space-between; */
+            /* align-content: space-evenly; */
+           
+           
+            /* gap: 30px; */
+            /* row-gap: 20px; */
+            column-gap: 20px;
+           
+            height: 600px;
+            background-color:#034f84;
+      
+        }
+        /* Not: Yukarıda align-items:center dediğimizde tarayıcı daralttığımız andan itibaren nesneler bir alt satıra geçer ama kendi satırında
+        ortalanarak hizalanırlar. align-content:center dediğimizde ise elemanları bulunduğu containerın ortasına hizalar.  */
+        /* align-content: flex-start >> Elemanları tarayıcının başına hizalar.
+        align-content: flex-end >> Elemanları tarayıcının sonuna hizalar.
+        
+        align-content: space-around >> Elemanların başında ve sonunda 1 birim boşluk aralarında ise 2 birim boşluk bırakarak hizalar. 
+        align-content: space-between >> Tarayıcının başında ve sonunda boşluk olmaz ancak elemanlar arasında eşit boşluklar oluşarak
+        satır satır hizalanır.
+        align-content: space-evenly >> Elemanlar tarayıcıda sayfanın başında, sonunda ve aralarında eşit boşluklar bırakarak hizalanırlar.
+        */
+
+
+        /* Not: Yukarıda gap:30px diyerek elemanların dört bir tarafından 30px'lik bir boşluk vermiş oluruz. Tabi sadece gap:30px derken 
+        align-content:center yapmamız ve .item sınıfı içinde de margin özelliğini pasif edelim ki elemanların aralarındaki bu 30px'lik 
+        boşluğu net görelim. */
+
+        /* row-gap: 20px derken margin özelliğini pasif ettiğimiz için sadece satır arasında 20px'lik bir boşluk gözükür.
+        column-gap:20px derken margin özelliğini pasif ettiğimiz için sadece elemanların sağında ve solunda 20px'lik bir boşluk gözükür. */
+        
+        .item{
+            
+            background-color: #f7786b;
+            padding: 30px;
+            /* margin: 20px; */
+            color: #fff;
+            font-size: 25px;
+
+           
+        }
+        
+       
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="item ">item 1</div>
+    <div class="item ">item 2</div>
+    <div class="item ">item 3</div>
+    <div class="item ">item 4</div>
+    <div class="item ">item 5</div>
+    <div class="item ">item 6</div>
+    <div class="item ">item 7</div>
+    <div class="item ">item 8</div>
+
+    </div>
+</body>
+</html>

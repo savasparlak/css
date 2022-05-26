@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    nav{
+        position: relative;
+        background-color: goldenrod;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        align-self: center;
+        padding: 16px;        
+    }
+
+    .navigation{
+    list-style-type: none;
+    display: flex;
+    }
+
+    .navigation a{
+    display: block; 
+    padding: 13px;   
+    }
+
+    .navigation a:hover{
+  background-color: rgb(235, 184, 57);
+    }
+    .navigation li:last-child{
+    display: none;
+    }
+
+    @media (max-width:600px) {
+        nav {
+            flex-direction: column;
+        }
+        
+        nav a{
+            align-self: flex-start;
+        }
+        .navigation {            
+            flex-direction: column;
+         }
+         .navigation a {
+         text-align: center;
+         border-top: 1px solid rgba(0,0,0,0.1);
+         border-bottom: 1px solid rgba(255,255,255,0.3);
+         }
+         .navigation li:last-child{
+            display: block;
+            position: absolute;
+            top:2.5px;
+            right: 10px;
+         }
+
+         .responsive .navigation li:not(:last-child)
+         {
+             display: none;
+         }
+
+         .navigation li:last-child a{
+             border-top: none;
+             border-bottom: none;
+         }    
+        
+
+    }
+
+</style>
+
+</head>
+<body>
+    
+<nav id="main-nav" class="">
+    <a href="">Logo</a>
+    <ul class="navigation">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Products</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="#" onclick="displayMenu()">
+            <i class="fa fa-bars"></i>
+        </a></li>
+    </ul>
+</nav>
+
+<script>
+    function displayMenu() {
+        var link = document.getElementById("main-nav");
+        link.classList.toggle("responsive");
+    }
+</script>
+
+</body>
+</html>

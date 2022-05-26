@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>  
+
+     div  p {
+        background-color: burlywood;
+    }
+/* div bloğunun içinde olan tüm p etiketlerini etkiler. 
+SONUÇ: 2,3,4,5,6 ve 7. Paragraflar*/
+
+    /* div > p {
+        background-color: burlywood;
+    } */
+ /* div bloğunun çocuğu olan p etiketlerini etkiler. SONUÇ: 2,3,6 ve 7. Paragraflar*/
+    
+ /* div > section > p {
+        background-color: burlywood;
+    } */
+/* div bloğunun çocuğunun çocuğu olan p etiketlerini etkiler. 
+(div'in çocuğu section ve section'ın da çocuğu olan p etiketleri yani) SONUÇ: 4. ve 5. Paragraflar*/
+
+    /* div + p{
+        background-color: burlywood;
+    } */
+
+/* div bloğundan hemen sonra gelen ve div ile aynı seviyede olan p etiketini etkiler. SONUÇ: 8. Paragraf*/
+
+    /* div ~ p{
+        background-color: burlywood; 
+    } */
+    /* div bloğundan sonra gelen ve div ile aynı seviyede olan p etiketlerini etkiler. SONUÇ: 8. Paragraf ve sonrası paragraflar*/
+
+</style>
+
+</head>
+<body>
+
+    <p>1. Paragraf</p>
+    <div>
+        <p>2. Paragraf</p>
+        <p>3. Paragraf</p>
+        <section>
+            <p>4. Paragraf</p>
+            <p>5. Paragraf</p>
+        </section>
+        <p>6. Paragraf</p>
+        <p>7. Paragraf</p>
+    </div>
+    <p>8. Paragraf</p>
+    <p>9. Paragraf</p>
+
+</body>
+</html>

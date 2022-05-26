@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        html{
+            font-size: 10px;
+        }
+        /* Not: Root olan html etiketine ne değer verilirse rem ölçü birimini kullanan tüm etiketlerin boyutları da orantısal olarak
+        o şekilde hesaplanır.  */      
+       
+              /* phone */
+
+        @media (max-width: 575px) {
+            html{
+                font-size: 12px;
+            }    
+            
+            #kutu-1 h2{
+                font-size: 1.8rem;
+            }
+        }
+
+        /* landscape */
+        @media (min-width: 576px) and (max-width: 767px) {
+            html{
+                font-size: 13px;
+            } 
+            #kutu-1 h2{
+                font-size: 1.8rem;
+            }
+        }
+        
+        /* tablets */
+        @media (min-width: 768px) and (max-width: 991px) {
+            html{
+                font-size: 14px;
+            } 
+            #kutu-1 h2{
+                font-size: 1.8rem;
+            }
+        }
+        
+
+        /* desktop */
+        @media (min-width: 992px) and (max-width: 1199px) {
+            html{
+                font-size: 15px;
+            } 
+            #kutu-1 h2{
+                font-size: 1.8rem;
+            }
+        }
+        
+
+        /* large desktop */
+        @media (min-width: 1200px) and (max-width: 1399px) {
+            html{
+                font-size: 16px;
+            } 
+            #kutu-1 h2{
+                font-size: 1.8rem;
+            }
+        }
+        
+
+        /* xlarge desktop */
+        @media (min-width: 1400px) {
+            html{
+                font-size: 17px;
+            } 
+            #kutu-1 h2{
+                font-size: 1.8rem;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div id="kutu-1">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, neque sed libero sint illum cumque eveniet, 
+            accusantium delectus, doloremque architecto quae commodi? Recusandae esse velit quae rem aliquam qui accusantium!</p>
+    </div>
+    
+    <div id="kutu-2">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, neque sed libero sint illum cumque eveniet, 
+            accusantium delectus, doloremque architecto quae commodi? Recusandae esse velit quae rem aliquam qui accusantium!</p>
+    </div>
+    <!-- Not: Tarayıcı h2 ve p etiketlerinin font büyüklüğünü içinde bulunduğu bir üst etiketin font büyüklüğünü referans alarak orantısal
+olarak h2 etiketi için 1,5em ile çarparak, p etiketi için ise 1 em ile çarparak ayarlar. Eğer  bir üst etikette bulamazsa body etiketinde, 
+onda da bulamazsa html etiketine bakar, eğer onda da bulamazsa tarayıcının varsayılan 16pxlik font büyüklüğünü referans 
+alarak h2 etiketi için mesela 16*1,5em= 24px olarak hesaplar. Tabi orantısal olarak hesaplama işlemi sadece h ve p etiketleri için değil
+piksel olarak atanan tüm etiketlerin boyutları için geçerlidir. -->
+
+    <div id="kutu-3">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, neque sed libero sint illum cumque eveniet, 
+            accusantium delectus, doloremque architecto quae commodi? Recusandae esse velit quae rem aliquam qui accusantium!</p>
+    </div>
+
+</body>
+</html>

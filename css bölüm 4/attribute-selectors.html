@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Attribute selector */
+        a[target] {
+            background-color: rgb(0, 255, 76);
+        }
+
+        [class="link"] {
+            background-color: rgb(187, 187, 236);
+        }
+
+        /* Attribute value selector */
+
+        /* a[class="active"] {
+            background-color: rgb(186, 186, 240);
+        }  */
+        
+        /* Attribute '*' selector  */
+        /* [class*="active"] {
+            background-color: rgb(185, 185, 238);
+        } */
+
+        /* Attribute '~' selector  */
+        /* [class~="active"] {
+            background-color: blue;
+        } */
+
+
+        /* Attribute '|' selector */
+
+        /* [class|="active"] {
+            background-color: blue;
+        } */
+
+        /* Attribute '^' selector  */
+        /* [class^="active"] {
+            background-color: blue;
+        } */
+
+        /* Attribute '$' selector */
+        /* [class$="active"] {
+            background-color: blue;
+        } */
+
+        /* Yukarıda belirtilen attribute-selector (öznitelik seçicisi) ile daha detaylı bilgi edinmek istenirse 
+        https://www.w3schools.com/css/css_attribute_selectors.asp sitesine bakılabilir. */
+    </style>
+</head>
+<body>
+
+    <span class="text active">text</span>
+
+    <nav>
+        <a href="" target="_blank">home</a>
+        <a href="" class="active">about</a>
+        <a href="rrr" class="link">contact</a>
+    </nav>
+
+</body>
+</html>

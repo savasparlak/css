@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+
+            /* align-items: center;
+            justify-content: center; */
+                      
+            height: 600px;
+            background-color:#034f84;
+      
+        }
+        /* Not: Yukarıda align-items: center ile justify-content: center satırlarını yazdığımızda
+        nesneyi yatayda ve dikeyde ortaya almış oluyoruz. Ancak bu iki satır yerine sadece
+        aşağıdaki .item sınıfı içinde margin:auto dediğimizde nesnenin dört kenarından boşluk bırakmış ve nesneyi containerın
+        ortasına sabitlemiş oluyoruz. Yani aslında yapılan aynı işlemdir. */
+        
+        
+        .item{
+            
+            background-color: #f7786b;
+            padding: 30px;
+            margin: 20px;
+            color: #fff;
+            font-size: 25px;      
+            
+            /* margin:auto; */
+            /* margin-top: auto; */
+            /* margin-bottom: auto; */
+            /* margin-right: auto; */
+            /* margin-left: auto; */
+
+            /* margin-left: auto;
+            margin-bottom: auto; */
+
+            /* margin-left: auto;
+            margin-top: auto; */
+        }
+        
+        /* Not: 
+        margin-top:auto dediğimizde nesne yukarından ve sağ tarafdan containerın köşesine itilir.
+        margin-bottom:auto dediğimizde ise nesnenin alt tarafından ve sağından boşluk bırakılarak
+        sayfanın sol üst köşesine itilir.
+        margin-right:auto dediğimizde nesnenin stretch özelliği devam eder ve sadece sağdan boşluk
+        bırakılır. Ve nesne sol tarafa yaslanır.
+        margin-left:auto dediğimizde nesnenin stretch özelliği devam eder ve sadece soldan boşluk
+        bırakılır. Ve nesne sağ tarafa yaslanır. */
+
+        /* Not: 
+        margin-left:auto ile margin-bottom:auto nesneyi aşağıdan ve soldan iter ve sayfanın sağ üst
+        köşesine yaslar.
+        margin-left:auto ile margin-top:auto nesneyi yukarıdan ve soldan iter ve sayfanın sağ alt
+        köşesine yaslar. */
+
+        .item-1{
+            margin:auto;
+        }
+
+        .item-2{
+            margin:auto;
+        }
+
+       
+        /* Not: margin:auto komutunu yazdığımızda kaçtane nesne varsa kendi içerisinde sayfa o kadar 
+        nesneye bölünür ve kendi kısmında nesneler ortalanır. */
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="item item-1">item 1</div>
+    <div class="item item-2 ">item 2</div>
+    
+    </div>
+</body>
+</html>

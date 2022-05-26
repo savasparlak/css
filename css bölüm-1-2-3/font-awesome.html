@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    
+<style>
+    
+   *{
+    box-sizing: border-box;
+   }
+    
+    #baslik{
+color:#3e4555;
+background-image: url('bg-image.jpeg');
+background-position: center;
+height: 500px;
+width: 100%;
+padding: 10px;
+
+        }
+ 
+body{
+margin: 0px;
+}
+
+.main-header__logo{
+    color:#fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.main-nav__item a{
+text-decoration: none;
+font-weight: bold;
+color: #fff;
+}
+
+.main-header{
+    background-color: #ccb6a1;
+    padding: 8px 16px;
+}
+
+.main-nav{
+    display: inline-block;
+    width: calc(100% - 101px); 
+    text-align: right;
+}
+
+.main-nav__items{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+.main-nav__item{
+    display: inline-block;    
+    margin: 0px 8px;
+}
+
+.main-nav__item__login a{
+margin-left: 10px;
+}
+
+#item1 a::before{
+    content: '\1F3E0  ';
+    color: black;
+}
+
+#item2 a::before{
+content: '\1F3AC  ';
+color: black;
+}
+
+#item3 a::before{   
+    content: '\260E  ';
+    color: black;
+}
+#item4 a::before{   
+    content: '\1F513   ';
+    color: black;
+}
+
+.main-nav__item a:hover{
+background-color: rgb(216, 220, 236);  
+color: black;  
+}
+
+.main-nav__item a:visited{
+color: green;    
+}
+
+.main-nav__item a:active{
+background-color: rgb(185, 92, 92);
+color: black;    
+}
+
+#altbaslik{
+color:black;
+background-color  :#cdb7a2;
+text-transform:capitalize; 
+padding: 10px;
+text-align: center;
+}
+
+#altbaslik h1{
+color: #3e4555;
+font-size: 30px;
+font-weight: 600;
+}
+
+        .row {
+            margin-bottom: 40px;
+        }
+
+        .col {
+            display: inline-block;
+            width: 30%;
+            padding: 16px;
+            margin: 8px;
+        }
+
+        .icon-box h3 {
+            color: #3e4555;
+            font-size: 26px;
+        }
+        .icon-box i {
+            color: #9e4e35;
+            font-size: 26px;
+        }
+
+</style>
+<!--NOT: Yukarıda nav etiketi için bir genişlik ayarlaması yapılmıştır. MovieApp başlığı ile nav etiketi başlıklarının aynı satırda 
+    yer alabilmesi için "width: calc(100% - 78px);" satırı yazılmıştır. nav menüsünü  tarayıcıda sağa yaslamamız için nav menüsü
+hem MoviApp yazısı ile aynı satırda olmalı hem de sağa yaslanmalıdır. Bunun için inline-block olan nav menüsünün tam genişliğine
+width:100% yapıp daha sonra calc fonksiyonu içinde MovieApp yazısının genişliği kadar bu satırdan çıkarılırsa aynı satırda gözükür
+ve ayrıca tarayıcımızın boyutları değişse bile nav menü elemanları herzaman sağa yaslı bir şekilde gözükür.-->
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="" class="main-header__logo">MovieApp</a>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item" id="item1" >
+                    <a href="http://www.istanbul.gov.tr/">Home</a>
+                </li>
+                <li class="main-nav__item" id="item2">
+                    <a href="http://en.istanbul.gov.tr/" >Movies</a>
+                </li>
+                <li class="main-nav__item" id="item3">
+                    <a href="http://zh.istanbul.gov.tr/" >Contact</a>
+                </li>
+                <li class="main-nav__item main-nav__item__login " id="item4">
+                    <a href="http://kartal.istanbul.gov.tr/" >Login</a>
+                </li>
+            </ul>
+               
+       </nav>
+    </header>
+   
+    <main>
+        <section id="baslik">
+            <h1  >Lorem ipsum dolor sit amet.</h1>            
+        </section>
+
+        <section id="altbaslik">
+        <div class="row">
+            <h1 >How it works?</h1>
+            <p>We will show you step by step how to start watching your favorite 
+                movies & tv shows starting now!</p>
+
+        </div>    
+        <div class="row">
+            <div class="icon-box col">
+                <i class="fas fa-sign-in-alt fa-2x"></i>
+                <h3>Register</h3>
+                <p  >Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Nam dolor repellendus minus doloribus tenetur accusamus?</p>
+            </div>
+
+            <div class="icon-box col">
+                <i class="fas fa-road fa-2x"></i>
+                <h3>Choose a Plan</h3>
+                <p  >Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Nam dolor repellendus minus doloribus tenetur accusamus?</p>
+            </div>
+
+            <div class="icon-box col">
+                <i class="fas fa-video fa-2x"></i>
+                <h3>Enjoy Movies</h3>
+                <p  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     Nam dolor repellendus minus doloribus tenetur accusamus?</p>            
+            </div>
+
+        </div>
+        </section>
+       
+    </main>
+    
+</body>
+</html>

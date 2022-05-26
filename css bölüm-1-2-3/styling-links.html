@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+   *{
+    box-sizing: border-box;
+   }
+    
+    #baslik{
+color:cyan;
+background-color: rgb(106, 129, 207);
+height: 200px;
+padding: 10px;
+
+width: 100%;
+        }
+h1{  
+    background-color: #312d2b;     
+}
+
+#altbaslik{
+color:black;
+background-color  :#cdb7a2;
+text-transform:capitalize; 
+padding: 10px;
+}
+ 
+body{
+margin: 0px;
+}
+
+.main-header__logo{
+    color:#fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.main-nav__item a{
+text-decoration: none;
+font-weight: bold;
+color: #fff;
+}
+
+.main-header{
+    background-color: #ccb6a1;
+    padding: 8px 16px;
+}
+
+.main-nav{
+    display: inline-block;
+    width: calc(100% - 101px); 
+    text-align: right;
+}
+
+.main-nav__items{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+.main-nav__item{
+    display: inline-block;    
+    margin: 0px 8px;
+}
+</style>
+<!--NOT: Yukarıda nav etiketi için bir genişlik ayarlaması yapılmıştır. MovieApp başlığı ile nav etiketi başlıklarının aynı satırda 
+    yer alabilmesi için "width: calc(100% - 78px);" satırı yazılmıştır. nav menüsünü  tarayıcıda sağa yaslamamız için nav menüsü
+hem MoviApp yazısı ile aynı satırda olmalı hem de sağa yaslanmalıdır. Bunun için inline-block olan nav menüsünün tam genişliğine
+width:100% yapıp daha sonra calc fonksiyonu içinde MovieApp yazısının genişliği kadar bu satırdan çıkarılırsa aynı satırda gözükür
+ve ayrıca tarayıcımızın boyutları değişse bile nav menü elemanları herzaman sağa yaslı bir şekilde gözükür.-->
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="" class="main-header__logo">MovieApp</a>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="">Home</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="">Movies</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+               
+       </nav>
+    </header>
+   
+    <main>
+        <section id="baslik">
+            <h1  >Lorem ipsum dolor sit amet.</h1>
+            
+        </section>
+        <section id="altbaslik">
+            <p  >How it works?</p>
+        </section>
+    </main>
+</body>
+</html>

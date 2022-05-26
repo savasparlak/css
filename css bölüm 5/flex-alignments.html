@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+
+            /* Not: flex-direction:column özelliğini verdiğimizde justify-content dikey için, align-items yatay ayarlamada kullanılır. 
+            Eğer flex-direction:row özelliğini verdiğimizde justify-content yatay için, align-items dikey ayarlamada kullanılır. */
+
+           /* justify-content: center; */
+           /* justify-content: flex-start;  */
+           /* Not: flex-start varsayılan özelliğidir zaten. Ve nesneler satırın başından itibaren sıralanır.*/
+
+              /* justify-content: flex-end; */
+            /* Not: Nesneler flex-end özelliği ile satırın sonuna yaslanarak ilk nesneden itibaren sıralanır. */
+
+            /* justify-content: space-around; */
+            /* Not: space-around ile nesneler arasına boşluk konulur ve satır ortalanır. */
+
+            /* justify-content: space-between; */
+            /* Not: space-between komutu ile ilk nesnenin solundaki boşluk ile son nesnenin sağındaki boşluk kaldırılır. Ancak nesnelerin
+            aralarındaki boşluklar yine kalır ve sayfa ortalanarak sıralanırlar.*/
+
+            /* justify-content: space-evenly; */
+            /* Not: Nesnelerin aralarındaki boşluklar ile ilk ve son nesnenin başında ve sonunda bırakılan boşluklar eşit olacak şekilde
+            nesneler sıralanır. */
+
+            /* align-items: stretch; */
+            /* Not: Nesneler bulunduğu container içinde containerın yüksekliği neyse bulunduğu yerden sayfanın sonuna doğru uzatılır.
+            Nesnelerin stretch(uzatma) edilmesi varsayılan olarak sayfanın yüksekliği kadardır. Yani stretch özelliği yazılsa da
+            yazılmasa da nesneler containerın yüksekliği kadar sayfanın sonuna doğru uzatılır. */
+
+            /* align-items: flex-start; */
+            /* Not: Nesneler container içinde içerik kadar yer kaplayarak containerın başına sabitlenir. */
+
+             /* align-items: flex-end; */
+            /* Not: Nesneler container içinde içerik kadar yer kaplayarak containerın sonuna sabitlenir. */
+
+            /* align-items: center; */
+            /* Not: Nesneler container içinde içerik kadar yer kaplayarak containerın ortasına sabitlenir. */
+
+            /* align-items: center; 
+               justify-content: center;             */
+            /* Not: Nesneleri yatayda ve dikeyde containerın ortasına hizalamak istersek "align-items: center" , "justify-content: center" 
+            özelliklerini birlikte çalıştırmalıyız.
+            */
+
+            /* align-items: flex-end; 
+            justify-content: flex-start; */
+            /* Not: Nesneleri containerın altında ve satırın başından itibaren hizalamak istersek "align-items: flex-end" , "justify-content: flex-start" 
+            özelliklerini birlikte çalıştırmalıyız.
+            */
+            
+            /* align-items: flex-end; 
+            justify-content: flex-end; */
+            /* Not: Nesneleri containerın altında ve satırın sonuna doğru hizalamak istersek "align-items: flex-end" , "justify-content: flex-end" 
+            özelliklerini birlikte çalıştırmalıyız.
+            */
+
+             /* align-items: flex-start; 
+            justify-content: flex-end; */
+            /* Not: Nesneleri containerın başında ve satırın sonuna doğru hizalamak istersek "align-items: flex-start" , "justify-content: flex-end" 
+            özelliklerini birlikte çalıştırmalıyız.
+            */
+
+            /* Yani align-items ve justify-content ile nesneleri bulunduğu containerın içinde her tarafa konumlandırabiliyoruz. */
+
+            /* align-items: flex-end;
+            justify-content: space-evenly; */
+
+            height: 600px;
+            background-color:#034f84;
+            padding: 15px;
+        }
+    
+        .item{
+            background-color: #f7786b;
+            padding: 30px;
+            margin: 20px;
+            color: #fff;
+            font-size: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="item">item 1</div>
+    <div class="item">item 2</div>
+    <div class="item">item 3</div>
+    <div class="item">item 4</div>
+    
+
+    </div>
+</body>
+</html>

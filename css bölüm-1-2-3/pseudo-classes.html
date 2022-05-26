@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+a{
+    border:1px solid gray;
+    border-radius: 10px;
+    padding: 5px 8px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+a:link{
+    color: red;
+}
+
+a:visited{
+    color: green;
+}
+
+a:hover{
+    color: #fff;
+    background-color: #80800d;
+}
+
+a:active{
+    color: #fff;
+    background-color: violet;
+}
+
+div:hover p{
+    background-color: red;
+    display: block;
+}
+p{
+    display: none;
+}
+
+span a.highlight:hover {
+  color: #ff0000;
+  font-size: 22px;
+  width: 200px;  
+} 
+/* span bloğunun içinde yer alan ve sınıfı highlight olan a etiketinin üzerine
+geldiği zaman çalışan sınıftır yukarıdaki. */
+</style>
+
+
+</head>
+<body>
+    <a href="a.html">Home</a>
+    <a href="b.html">Products</a>
+    <a href="c.html">About</a>   
+    
+    <br><br>
+
+    <!-- Pseudo Class'lar sadece a etiketlerine değil, 
+    tüm etiketlere uygulanabilmektedir. Örneğin aşağıdaki div etiketi
+bloğu içinde yer alan satırın üzerine geldiğinizde varsayılan olarak
+display:none olan p etiketi display:block oluyor ve içindeki yazı
+ekranda gözüküyor.-->
+    <div>
+        Fareyi bu alana getirin! 
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Sint asperiores odit, voluptatibus reprehenderit praesentium
+             hic consectetur molestiae. Molestias, cupiditate esse?
+        </p>       
+    </div>
+<br><br>
+    <span><a class="highlight" href="css_syntax.asp">CSS Syntax</a></span>
+</body>
+</html>

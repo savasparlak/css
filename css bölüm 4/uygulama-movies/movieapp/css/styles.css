@@ -1,0 +1,313 @@
+    
+   *{
+    box-sizing: border-box;
+   }
+    
+    html {
+        scroll-behavior: smooth;
+        }
+
+    #baslik{
+        color:#3e4555;
+        background: 
+    linear-gradient(to bottom, rgba(252, 153, 124, 0.2),rgba(250, 81, 30, 0.2)),
+    url('../img/bg.jpeg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        height: 80vh;
+        width: 100%;       
+        position: relative;
+
+        }
+
+ #baslik .content{
+     position: absolute;     
+     top:60%;
+     left:50% ;
+     transform:translate(-50%,-50%) ;    
+     font-size: 25px;
+     color: rgb(255, 255, 255,0.5);
+     background: rgba(46, 76, 109, 0.3);
+     padding: 20px;
+     width: 60%;
+     border-radius: 10px;
+ }
+/* NOT: Yukarıdaki h1 etiketi id'si #baslik olan çerçeve etiketinin içinde bir etiket olduğundan position özelliği çerçeve etiketine
+relative, h1 etiketine absolute özelliği verilir. H1 etiketini çerçeve etiketinin tam ortasına almak için yukarıdan ve soldan 50% değer
+veririz. Ancak h1 etiketini yine tam ortaya alamayız. H1 etiketinin içeriğinin tam ortasını dıştaki çerçevenin ortasına tam ortalamak 
+için ise transform:translate(-50%,-50%) özelliğini h1 etiketine tanımlamamız lazım. */
+
+body{
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+}
+
+main{
+    margin-top: 55px;
+}
+.main-header__logo{
+    color:#fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.main-nav__item a{
+text-decoration: none;
+font-weight: bold;
+color: #fff;
+}
+
+.main-header{
+    background-color: #ccb6a1;
+    padding: 8px 16px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0px;
+}
+
+.main-nav{
+    display: inline-block;
+    width: calc(100% - 101px); 
+    text-align: right;
+}
+
+.main-nav__items{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+.main-nav__item{
+    display: inline-block;    
+    margin: 0px 8px;
+}
+
+
+#item1 a::before{
+    content: '\1F3E0  ';
+    color: black;
+}
+
+#item2 a::before{
+content: '\1F3AC  ';
+color: black;
+}
+
+#item3 a::before{   
+    content: '\260E  ';
+    color: black;
+}
+#item4 a::before{   
+    content: '\1F513   ';
+    color: black;
+}
+
+.main-nav__item a:hover{
+background-color: rgb(216, 220, 236);  
+color: black;  
+}
+
+.main-nav__item a:visited{
+color: green;    
+}
+
+.main-nav__item a:active{
+background-color: rgb(185, 92, 92);
+color: black;    
+}
+
+#altbaslik{
+color:black;
+background-color  :#cdb7a2;
+text-transform:capitalize; 
+padding: 10px;
+text-align: center;
+}
+
+
+        .row {
+            margin-bottom: 40px;
+        }
+
+        .row::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .col-2{
+            float: left;
+            width: 50%;
+            height: 350px;            
+        }
+
+        .col-3 {
+           float: left;
+            width: 33.3%;
+            padding: 16px;          
+        }
+
+        .col-4 {
+            float: left;
+            width: 25%;
+        }
+
+        .icon-box h3 {
+            color: #3e4555;
+            font-size: 26px;
+        }
+        .icon-box i {
+            color: #9e4e35;
+            font-size: 26px;
+        }
+
+        .features{
+            margin:0px;
+        }
+        .features-left{
+            background: 
+            linear-gradient(to bottom, rgba(252, 153, 124, 0.2),rgba(250, 81, 30, 0.2)),
+            url('../img/uygulama__features.jpeg');
+            background-size: cover;
+            background-position: top center;
+        }
+        /* .features-left sınıfında  background-size: cover diye bir özellik tanımladık çünkü arka planda olan resmi tanımlandığı
+        bloğun içine (çerçeveye yani) sığdırmasını istedik. background-position: top center özelliği ile de resmi yukarıdan ortaladık.
+        */
+        .features-right{
+            background-color:aliceblue;
+            padding: 40px;
+            vertical-align: top;
+        }
+
+        .features-right h3{
+            font-size: 30px;
+        }
+        
+        /* Yukarıda .features-right a sınıfında tarayıcıda buton görünümlü olan a etiketine yazı ile arasında boşluk verebilmek için
+        a etiketini önce   display: inline-block yapmamız gerekir ki daha sonra margin-top:15px ile bir boşluk verebilelim. */
+
+          
+        .section-title{
+            text-align: center;
+            margin-bottom: 40px;
+            color: #3e4555;
+            font-size: 30px;
+            font-weight: 600;
+            }
+            
+        .plan{           
+            text-align: center;
+            padding: 5px;
+        }
+
+        .plan__badge{
+            background: #fff;
+            color: #fc997c;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        .recommended_plan{
+            color: #fff;
+            background: #396eb0!important;
+        }
+
+        .plan--features{
+            position: relative;
+            top: -20px;
+        }
+
+        .inner-plan{
+            background: #edf5f7;
+            padding: 25px 10px;
+            border-radius: 5px;
+            box-shadow: 5px 10px 15px 5px #888888;
+            box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+            transition: box-shadow .2s;
+        }
+
+        .inner-plan:hover{
+            box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.5);
+        }
+/* NOT: Yukardaki box-shadow özelliği ile nesnelere gölgelendirme efekti verebiliyoruz. Ayrıca transition özelliği sayesinde de 
+gölgelendirme efektine süre vererek geçiş efekti ekleyebiliriz. */
+       
+        .container {
+            margin: 0 auto;
+            width: 1000px;                       
+        }
+        
+        #backtotop{
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            font-size: 45px;
+        }
+
+        #backtotop i{
+            color: #fc997c;
+            transition: color .6s;
+        }
+
+        #backtotop i:hover{
+            color: #fb6537;
+        }
+           
+
+/* NOT: Yukarıda nav etiketi için bir genişlik ayarlaması yapılmıştır. MovieApp başlığı ile nav etiketi başlıklarının aynı satırda 
+    yer alabilmesi için "width: calc(100% - 78px);" satırı yazılmıştır. nav menüsünü  tarayıcıda sağa yaslamamız için nav menüsü
+hem MoviApp yazısı ile aynı satırda olmalı hem de sağa yaslanmalıdır. Bunun için inline-block olan nav menüsünün tam genişliğine
+width:100% yapıp daha sonra calc fonksiyonu içinde MovieApp yazısının genişliği kadar bu satırdan çıkarılırsa aynı satırda gözükür
+ve ayrıca tarayıcımızın boyutları değişse bile nav menü elemanları herzaman sağa yaslı bir şekilde gözükür.  */
+
+
+.counter{
+    background: linear-gradient(to bottom, #fc997c 0%, #fc8b69 100%);
+    text-align: center;
+    padding: 50px;
+}
+
+.counter__item {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.counter h4 {
+    margin: 0;
+    color: #fff;
+}
+
+.card{    
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(52,58,64,0.1); 
+    /* position: relative;
+    top: 0px;   */
+    transition: all .3s;
+    /* Yukarıda position:relative diyerek nesneyi olduğu yerden yani top:0px noktasından transition: all .3s gibi bir
+    zaman diliminde nesnelerin üzerine hover olduğumuzda top:-10px konumuna getirmiş oluyoruz. */
+}
+   
+.card:hover{
+    /* top: -10px; */
+    transform: translateY(-10px);
+/* Cardların yukarı transition özelliğine alternatif bir özellik olarak 
+transform: translateY(-10px) yöntemini kullanabiliriz. Y hizasında -10px bulunduğu yerden yukarı kaydırır bu işlem.
+ Tabi bunun için "position: relative; top: 0px;" özelliklerini pasif etmemiz lazım. 
+ Sadece "transition: all .3s" özelliği aktif olmalı. */
+}
+
+.card-image{
+max-height: 350px;
+}
+
+.card-body{
+    padding: 30px;
+}
+
+.img-fluid{
+    width: 100%;
+}
